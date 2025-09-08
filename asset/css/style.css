@@ -72,10 +72,14 @@ main{
 
 /*Mid container style*/
 .mid_cont{
-    display: inline-block;
-    text-align: center;
+    display: grid;
+    grid-template-columns: 250px 250px 250px;
+    grid-template-rows: 338px 338px;
+    place-items: center;
+    place-content: center;
+
     background-color: #d9d9dd;
-    width: 748px;
+    width: 750px;
     height: 676px;
 
     border-radius: 10px 10px 10px 10px;
@@ -89,31 +93,31 @@ main{
 
     /*upper film style*/
 
-.upper_film{
-    display: inline-block;
+#image_1{
+    width: 172px ;
+    height: 306px;
+    grid-area: 1 / 1 / 2 / 2;
 }
 
-    
-    .upper_film .image_1{
-        width: 176px; 
-        margin-right: 50px;
-        margin-top: 21px;
-    }
-    .upper_film .image_2{
-        width: 438px;
-    
-    }
+#image_2{
+    width: 438px ;
+    height: 306px;
+    grid-area: 1 / 2 / 2 / 4;
+}
 
-    /*lower film style*/
-    
-    .lower_film .image_1{
-        width: 176px; 
-    }
-    .lower_film .image_2{
-        width: 438px;
-        margin-right: 50px;
-        margin-top: 9px;
-    }
+#image_3{
+    width: 438px ;
+    height: 306px;
+    grid-area: 2 / 1 / 3 / 3;
+}
+
+#image_4{
+    width: 172px ;
+    height: 306px;
+    grid-area: 2 / 3 / 3 / 4;
+}
+
+
 
 
 /*side containers style*/

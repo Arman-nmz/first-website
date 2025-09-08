@@ -4,7 +4,9 @@ body{
 }
 
 section{
-    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 img{
@@ -59,10 +61,12 @@ h1{
 
 /*Main section style*/
 main{
-    /*display: inline-block;
-    text-align: center;*/
+    display: flex;
+    justify-content: center;
+    gap: 37px;
     width: 100vw;
     padding-top: 20px ;
+
 
 }
 
@@ -115,8 +119,12 @@ main{
 /*side containers style*/
 
 .side_cont{
-    display: inline-block;
+    display: flex;
+    flex-direction: column;
     text-align: center;
+    align-items: center;
+    justify-content: space-around;
+    /*gap: 80px;*/
     background-color: #C5D9D6;
     width: 277px;
     height: 676px;
@@ -133,9 +141,11 @@ main{
 
 .side_cont h4{
     font-size: 20px;
+    margin: 0;
 
 }
 
 .side_cont p{
-    padding-left: 10px;
+    padding: 10px;
+    margin: 0;
 }

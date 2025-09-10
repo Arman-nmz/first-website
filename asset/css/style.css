@@ -34,7 +34,7 @@ header{
 }
 
 .header_box{
-    width: 80%;
+    width: clamp(250px, 80%, 1380px);
 }
 
 h1{

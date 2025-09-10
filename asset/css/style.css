@@ -64,14 +64,17 @@ main{
 /*Mid container style*/
 .mid_cont{
     display: grid;
-    grid-template-columns: 250px 250px 250px;
-    grid-template-rows: 338px 338px;
+    grid-template-columns: repeat(3, 1fr);;
+    /* grid-template-rows: 338px 338px; */
+    gap: 1rem;
     place-items: center;
     place-content: center;
 
     background-color: #d9d9dd;
-    width: 750px;
-    height: 676px;
+    width: 47rem;
+    height: auto;
+
+    padding: min(1.5rem,10vw) 0 min(1.5rem,10vw);
 
     border-radius: 10px 10px 10px 10px;
     -webkit-border-radius: 10px 10px 10px 10px;
@@ -85,26 +88,26 @@ main{
     /*upper film style*/
 
 #image_1{
-    width: 172px ;
-    height: 306px;
+    width: 70% ;
+    height: auto;
     grid-area: 1 / 1 / 2 / 2;
 }
 
 #image_2{
-    width: 438px ;
-    height: 306px;
+    width: 88%;
+    height: auto;
     grid-area: 1 / 2 / 2 / 4;
 }
 
 #image_3{
-    width: 438px ;
-    height: 306px;
+    width: 88%;
+    height: auto;
     grid-area: 2 / 1 / 3 / 3;
 }
 
 #image_4{
-    width: 172px ;
-    height: 306px;
+    width: 70% ;
+    height: auto;
     grid-area: 2 / 3 / 3 / 4;
 }
 
@@ -121,8 +124,8 @@ main{
     justify-content: space-around;
     /*gap: 80px;*/
     background-color: #C5D9D6;
-    width: 277px;
-    height: 676px;
+    width: 19rem;
+    height: auto;
     margin: 0 1.5rem 0;
     border-radius: 10px 10px 10px 10px;
     -webkit-border-radius: 10px 10px 10px 10px;
@@ -135,12 +138,27 @@ main{
 }    
 
 .side_cont h4{
-    font-size: 20px;
+    font-size: clamp(0.4rem, 1.7vw, 2rem);
     margin: 0;
 
 }
 
 .side_cont p{
-    padding: min(1rem , 2%);
+    font-size: clamp(0.2rem,1.1vw,1.5rem);
     margin: 0;
+}
+
+@media (max-width: 412px) {
+    .side_cont{
+        display: none;
+    }
+    
+    main{
+        flex-direction: column;
+    }
+
+    .mid_cont{
+        display: flex;
+        flex-direction: column;
+    }
 }

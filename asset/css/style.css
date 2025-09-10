@@ -24,6 +24,11 @@ img{
 header{
     display: flex;
     justify-content: center;
+
+    position: sticky;
+    top : 0;
+    
+
     width: 100%;
     min-width: 80vw;
 }
